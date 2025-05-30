@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.pig.dao.KingChildAccountRecordDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.king.pig.entity.KingChildAccountRecord">
+        <id column="id" property="id"/>
+        <result column="child_id" property="childId"/>
+        <result column="type" property="type"/>
+        <result column="account_in" property="accountIn"/>
+        <result column="account_out" property="accountOut"/>
+        <result column="status" property="status"/>
+        <result column="notes" property="notes"/>
+        <result column="current_date" property="currentDate"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, child_id AS childId, type, account_in AS accountIn, account_out AS accountOut, status, notes, current_date
+        AS currentDate, create_time AS createTime, update_time AS updateTime
+    </sql>
+
+
+    <select id="getAccountDateRecordPage" resultType="com.king.pig.dto.account.resp.KingAccountRecordDateResp">
+        select r.current_date,r.child_id  from t_king_child_account_record r
+        where r.child_id = #{childId}
+        <if test="null != type and '' != type ">
+            and r.type = #{type}
+        </if>
+        group by r.current_date,r.child_id
+        order by r.current_date desc
+    </select>
+
+
+    <select id="getAccountDateRecord" resultMap="BaseResultMap">
+        select r.*
+        from t_king_child_account_record r
+        where r.child_id = #{childId}
+        <if test="null != currentDateList and currentDateList.size()>0 ">
+            and r.current_date in
+            <foreach collection="currentDateList" item="currentDate" separator="," open="(" close=")" index="index">
+                #{currentDate}
+            </foreach>
+        </if>
+        <if test="null != type and '' != type ">
+            and r.type = #{type}
+        </if>
+        order by r.create_time desc
+    </select>
+
+
+    <select id="getAccountDateTotalList" resultType="com.king.pig.dto.account.resp.KingAccountChatResp">
+        select r.current_date,r.child_id, sum(r.account_in-r.account_out) as accountTotal from t_king_child_account_record r
+        where r.child_id = #{childId}
+        <if test="null != type and '' != type ">
+            and r.type = #{type}
+        </if>
+        <if test="null != startDate ">
+            and r.current_date >= #{startDate}
+        </if>
+        <if test="null != endDate ">
+            <![CDATA[ and r.current_date <= #{endDate} ]]>
+        </if>
+        group by r.current_date, r.child_id
+        order by r.current_date desc
+    </select>
+
+</mapper>

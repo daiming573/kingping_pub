@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dedede; /* #f8f8f8; */
+    padding: 0 15px;
+}
+
+.item-list {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    /*border: 1px solid #E6E6E6;*/
+}
+
+.justify-content {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.pmmc {
+    float: left;
+}
+
+.pm {
+    float: right;
+}
+
+.pm > i {
+    float: left;
+}
+
+.item {
+    -webkit-flex: 1;
+    flex: 1;
+    width: 20%;
+    float: left;
+}
+
+.item-block {
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    border-top: 1px solid transparent;
+}
+
+.first-li {
+    margin-top: 20px;
+}
+
+.last-li {
+    margin-bottom: 80px;
+}
+
+.border {
+    border: 1px solid #d6d6d6;
+}
+
+.item-block span {
+    padding: 0 20px;
+    display: inherit;
+}
+
+.item-block span > i {
+    font-style: normal;
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+}
+
+.item-block span > i.paiming {
+    width: 33px;
+    text-align: right;
+}
+
+.paiming i {
+    width: 16px;
+    height: 45px;
+    display: inline-block;
+    /* background: url(../images/number1.png) no-repeat; */
+    background-position: 0 0;
+    margin-left: -5px
+}
+
+#zzxbPIE {
+    width: 100%;
+    height: auto;
+}
+
+#zzxbPIE img {
+    width: 50%;
+    height: auto;
+}
+
+#zznlPIE {
+    width: 100%;
+    height: auto;
+}
+
+#zznlPIE img {
+    width: 50%;
+    height: auto;
+}
+
+/* 3.6新增CSS */
+.title {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.item-left {
+    float: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+}
+
+.item-year {
+    float: right;
+}
+
+.block-area {
+    float: right;
+}

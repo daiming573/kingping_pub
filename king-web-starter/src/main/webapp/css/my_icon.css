@@ -1,0 +1,171 @@
+/*icons style start*/
+.com-help {
+    background: url("../images/sys/com/help.gif") no-repeat center center;
+}
+
+.com-config {
+    background: url("../images/sys/com/config.gif") no-repeat center center;
+}
+
+.com-refresh {
+    background: url("../images/sys/com/refresh.gif") no-repeat center center;
+}
+
+.com-update {
+    background: url("../images/sys/com/update.gif") no-repeat center center;
+}
+
+.catalog-table {
+    background: url("../images/sys/catalog/table.gif") no-repeat center center;
+}
+
+.catalog-form {
+    background: url("../images/sys/catalog/form.gif") no-repeat center center;
+}
+
+.catalog-list {
+    background: url("../images/sys/catalog/list.gif") no-repeat center center;
+}
+
+.catalog-user {
+    background: url("../images/sys/catalog/user.gif") no-repeat center center;
+}
+
+.catalog-org {
+    background: url("../images/sys/catalog/org.gif") no-repeat center center;
+}
+
+.catalog-role {
+    background: url("../images/sys/catalog/role.gif") no-repeat center center;
+}
+
+.catalog-module {
+    background: url("../images/sys/catalog/module.gif") no-repeat center center;
+}
+
+.catalog-folder {
+    background: url("../images/sys/catalog/folder.gif") no-repeat center center;
+}
+
+.form-form {
+    background: url("../images/sys/form/form.gif") no-repeat center center;
+}
+
+.form-list {
+    background: url("../images/sys/form/list.gif") no-repeat center center;
+}
+
+.form-zoom {
+    background: url("../images/sys/form/zoom.gif") no-repeat center center;
+}
+
+.form-edit {
+    background: url("../images/sys/form/edit.gif") no-repeat center center;
+}
+
+.form-delete {
+    background: url("../images/sys/form/delete.gif") no-repeat center center;
+}
+
+.form-copy {
+    background: url("../images/sys/form/copy.gif") no-repeat center center;
+}
+
+.form-next {
+    background: url("../images/sys/form/next.gif") no-repeat center center;
+}
+
+.form-cut {
+    background: url("../images/sys/form/cut.gif") no-repeat center center;
+}
+
+.form-view {
+    background: url("../images/sys/form/view.gif") no-repeat center center;
+}
+
+.form-lov {
+    background: url("../images/sys/form/lov.gif") no-repeat center center;
+}
+
+.form-config {
+    background: url("../images/sys/form/config.gif") no-repeat center center;
+}
+
+.form-history {
+    background: url("../images/sys/form/history.gif") no-repeat center center;
+}
+
+.form-exe {
+    background: url("../images/sys/db/execute.gif") no-repeat center center;
+}
+
+.db-database {
+    background: url("../images/sys/db/database.gif") no-repeat center center;
+}
+
+.db-tab {
+    background: url("../images/sys/db/tab.gif") no-repeat center center;
+}
+
+.db-seq {
+    background: url("../images/sys/db/seq.gif") no-repeat center center;
+}
+
+.db-key {
+    background: url("../images/sys/db/key.gif") no-repeat center center;
+}
+
+.db-col {
+    background: url("../images/sys/db/col.gif") no-repeat center center;
+}
+
+.db-dbgroup {
+    background: url("../images/sys/db/dbgroup.gif") no-repeat center center;
+}
+
+.db-pkg {
+    background: url("../images/sys/db/pkg.gif") no-repeat center center;
+}
+
+.db-view {
+    background: url("../images/sys/db/view.gif") no-repeat center center;
+}
+
+.db-action {
+    background: url("../images/sys/db/action.gif") no-repeat center center;
+}
+
+.db-batch {
+    background: url("../images/sys/db/batch.gif") no-repeat center center;
+}
+
+.db-config {
+    background: url("../images/sys/db/config.gif") no-repeat center center;
+}
+
+.db-seqlist {
+    background: url("../images/sys/db/seqlist.gif") no-repeat center center;
+}
+
+.db-pkglist {
+    background: url("../images/sys/db/pkglist.gif") no-repeat center center;
+}
+
+.ds-field {
+    background: url("../images/sys/db/ds-field.gif") no-repeat center center;
+}
+
+.ds-fld {
+    background: url("../images/sys/db/ds-fld.gif") no-repeat center center;
+}
+
+.ds-dataset {
+    background: url("../images/sys/db/ds-dataset.gif") no-repeat center center;
+}
+
+.ds-ds {
+    background: url("../images/sys/db/ds-ds.gif") no-repeat center center;
+}
+
+/*icons style end*/
+

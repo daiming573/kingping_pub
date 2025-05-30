@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.pig.dao.KingFamilyChildDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.king.pig.entity.KingFamilyChild">
+        <id column="id" property="id"/>
+        <result column="nick_name" property="nickName"/>
+        <result column="sex" property="sex"/>
+        <result column="birthday" property="birthday"/>
+        <result column="account_total" property="accountTotal"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, nick_name AS nickName, sex, birthday, account_total AS accountTotal, create_time AS createTime, update_time
+        AS updateTime
+    </sql>
+
+    <select id="getUserChildByFamilyId" resultMap="BaseResultMap">
+        select c.id, c.nick_name, c.sex, c.birthday, c.account_total, c.create_time, c.update_time
+        from t_king_family_child c inner join t_king_family_child_map m on c.id = m.child_id
+        where m.is_deleted = 0 and m.family_id = #{familyId}
+        order by c.create_time desc
+    </select>
+
+    <update id="addAccountTotal">
+        update t_king_family_child
+        set account_total = account_total + #{money}
+        where id = #{childId}
+    </update>
+
+    <update id="reduceAccountTotal">
+        update t_king_family_child
+        set account_total = account_total - #{money}
+        where id = #{childId} and (account_total- #{money}) >= 0
+    </update>
+
+</mapper>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cat.sy.dao.SyCatalogNodeDao">
+    <resultMap type="com.cat.sy.entity.SyCatalogNode" id="syCatalogNodeMap">
+        <id property="id" column="ID"/>
+        <result property="uuid" column="UUID"/>
+        <result property="catalogId" column="CATALOG_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="isValid" column="IS_VALID"/>
+        <result property="code" column="CODE"/>
+        <result property="name" column="NAME"/>
+        <result property="label" column="LABEL"/>
+        <result property="hasChild" column="HAS_CHILD"/>
+        <result property="typeName" column="TYPE_NAME"/>
+        <result property="iconName" column="ICON_NAME"/>
+        <result property="dispOrder" column="DISP_ORDER"/>
+        <result property="linkCatalog" column="LINK_CATALOG"/>
+        <result property="outerCatalog" column="OUTER_CATALOG"/>
+        <result property="doRedirect" column="DO_REDIRECT"/>
+        <result property="doInvoke" column="DO_INVOKE"/>
+        <result property="doIntroduce" column="DO_INTRODUCE"/>
+        <result property="createUserId" column="CREATE_USER_ID"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="note" column="NOTE"/>
+    </resultMap>
+
+    <insert id="save" parameterType="hashMap">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+            <![CDATA[SELECT LAST_INSERT_ID() AS id ]]>
+        </selectKey>
+        INSERT INTO sy_catalog_node(ID,UUID,CATALOG_ID,PARENT_ID,IS_VALID,CODE,NAME,LABEL,HAS_CHILD,TYPE_NAME,ICON_NAME,
+            DISP_ORDER,LINK_CATALOG,OUTER_CATALOG,DO_REDIRECT,DO_INVOKE,DO_INTRODUCE,CREATE_TIME,CREATE_USER_ID,NOTE)
+        VALUES(#{id},#{uuid,jdbcType=VARCHAR},#{catalogId,jdbcType=NUMERIC},#{parentId,jdbcType=NUMERIC},#{isValid,jdbcType=VARCHAR},
+        #{code,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR},#{label,jdbcType=VARCHAR},#{hasChild,jdbcType=VARCHAR},
+        #{typeName,jdbcType=VARCHAR},#{iconName,jdbcType=VARCHAR},#{dispOrder,jdbcType=NUMERIC},#{linkCatalog,jdbcType=VARCHAR},
+        #{outerCatalog,jdbcType=VARCHAR},#{doRedirect,jdbcType=VARCHAR},#{doInvoke,jdbcType=VARCHAR},#{doIntroduce,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP},#{createUserId,jdbcType=NUMERIC},#{note,jdbcType=VARCHAR})
+    </insert>
+
+    <sql id="page_where_sql">
+        where 1=1
+        <if test="code != null and code !=''">
+            AND t.CODE = #{code}
+        </if>
+        order by CREATE_TIME DESC
+    </sql>
+
+</mapper>

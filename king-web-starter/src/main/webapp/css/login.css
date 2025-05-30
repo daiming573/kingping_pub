@@ -1,0 +1,274 @@
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: 100% Tahoma, Helvetica, Arial, sans-serif;
+}
+
+body {
+    width: 100% !important;
+    height: 130%;
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #404040;
+    background-image: url("../images/login/bg.png");
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+li {
+    list-style: outside none none;
+}
+
+.body-border {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.content {
+    width: 1000px;
+    float: left;
+}
+
+.login-bg {
+    width: 350px;
+    height: 280px;
+    background: #f00;
+    float: left;
+    margin-left: 50px;
+}
+
+.login-box-warp {
+
+    height: 300px;
+
+    /*background:url(../images/login/beijingkuang_04.gif) no-repeat;*/
+
+    /*background-size:100%;*/
+
+    background-color: rgba(0, 0, 0, 0.50);
+
+    width: 418px;
+
+    padding-top: 10px;
+
+    /* float: left; */
+
+    float: none !important;
+
+    margin: auto !important;
+}
+
+.login-box-warp .hd {
+    overflow: hidden;
+}
+
+.login-box-warp .hd h2 {
+    display: block;
+    float: left;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    border-bottom: 1px solid #DEDEDE;
+    width: 100%;
+    padding-bottom: 12px;
+    cursor: pointer;
+}
+
+.login-box-warp .hd .static {
+    border-bottom: 1px solid #2dc8e0;
+    color: #333;
+}
+
+.login-box-warp .field {
+    margin-top: 10px;
+    position: relative;
+    font-size: 1.2em;
+    color: #fff;
+    display: block;
+}
+
+.login-box-warp .login-text {
+    width: 250px;
+    margin-top: 5px;
+    /*width: 177px;*/
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    vertical-align: middle;
+    border: 1px solid #ababab;
+    background: #efe2b8;
+    color: #878682;
+    text-indent: 10px;
+}
+
+.iconfont {
+    font-family: iconfont !important;
+    font-size: 16px;
+    font-style: normal;
+    display: none;
+}
+
+.login-box-warp .login-links {
+    margin-top: 24px;
+    overflow: hidden;
+}
+
+.login-box-warp a {
+    color: #666;
+}
+
+.login-box-warp .login-links .forget-pwd {
+    float: left;
+}
+
+.login-box-warp .login-links .register {
+    float: right;
+}
+
+.login-box-warp .submit {
+    /*margin-top: 25px;
+	margin-left:63px;*/
+    margin: 10px 30px;
+    width: 70%;
+}
+
+.login-box-warp .submit a {
+    width: 200px;
+    height: 32px;
+    border: 0px none;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFF;
+    background: #2dc8e0 none repeat scroll 0% 0%;
+    border-radius: 3px;
+    cursor: pointer;
+    /*background:url(../images/login/login-button_03.png) no-repeat;*/
+}
+
+.login-box-warp .other-login {
+    margin-top: 20px;
+}
+
+.login-box-warp .other-login a {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.weibo-login {
+    background: transparent url("../images/login/icon-weibo.png") no-repeat scroll 0px 50%;
+    padding-left: 28px;
+}
+
+.alipay-login {
+    padding-left: 20px;
+    background: transparent url("../images/login/icon-qq.png") no-repeat scroll 0px 50%;
+}
+
+p.foot {
+    width: 100%;
+    margin-top: 80px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    float: left;
+    font-size: 12px;
+}
+
+/*.name-password{ width:249px; margin-left:94px;}*/
+.name-password {
+    width: 280px;
+    margin: 0 20px;
+}
+
+.login-box-warp .login-code { /*width:58px;*/
+    width: 134px;
+}
+
+.login-box-warp .login-code-img {
+    width: 70px;
+    height: 32px;
+    background: #edf7ff;
+    float: right;
+}
+
+.login-box-warp .login-code-next {
+    float: right;
+    height: 20px;
+    text-decoration: underline;
+    color: #2d95bc;
+    font-size: 0.9em;
+    margin-left: 4px;
+    margin-top: 10px;
+}
+
+.login-box-warp input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+}
+
+.login-box-warp input[type=checkbox] {
+    visibility: hidden;
+}
+
+.login-box-warp label {
+    cursor: pointer;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 7px;
+    left: 63px;
+    background: #eaeaea;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    background: url("../images/login/checkboxbg.jpg") no-repeat;
+}
+
+.login-box-warp label:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("../images/login/checkboxbg-two.jpg") no-repeat;
+    top: 0px;
+    left: 0px;
+    background-size: 15px;
+}
+
+.login-box-warp input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .content {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1600px) {
+    .content { /*margin-top:100px;*/
+        margin-top: 100px;
+    }
+}

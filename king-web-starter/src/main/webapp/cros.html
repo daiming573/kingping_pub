@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请求跨域</title>
+    <script type="text/javascript" src="js/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="js/easyui/jquery.easyui.min.js"></script>
+</head>
+
+
+
+<body>
+<div >
+    <a href="javascript:void(0)" type="buttion" class="easyui-linkbutton" id="submitButton" onclick="send()">保存</a>
+</div>
+</body>
+
+<script type="text/javascript">
+
+
+    function send() {
+        $.ajax({
+            type: "get",
+            url: "http://127.0.0.1:8081/king_app/api/miniapp/user/getOpenIdByType",
+            data: "code=011RkDFa1GOIYz0AToHa11YcdY0RkDFY&type=daim",
+            success: function (data) {
+                debugger
+                if ("0" == data.code) {
+                    //修改成功
+                    $.messager.alert('提示信息', "修改成功");
+                } else {
+                    $.messager.alert('提示信息', "失败");
+                }
+            },
+            error: function (message) {
+                debugger
+                $.messager.alert('提示信息', '处理失败');
+            }
+        });
+    }
+
+</script>
+</html>

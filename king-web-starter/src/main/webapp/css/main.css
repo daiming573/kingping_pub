@@ -1,0 +1,271 @@
+.datagrid-btable .datagrid-cell {
+    padding: 3px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.w_normal {
+    width: 226px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.label {
+    width: 100px !important;
+    line-height: 24px;
+    float: left;
+    text-align: left !important;
+    vertical-align: bottom;
+}
+
+}
+body {
+    font-family: helvetica, tahoma, verdana, sans-serif;
+    padding: 20px;
+    font-size: 13px;
+    margin: 0;
+}
+
+/**a {outline:none;text-decoration:none;}**/
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.demo-info {
+    background: #FFFEE6;
+    color: #8F5700;
+    padding: 12px;
+}
+
+.demo-tip {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    float: left;
+}
+
+.top_bg {
+    height: 40px;
+    background-image: url("../images/login/bg.png");
+}
+
+.top_font {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000066;
+    text-align: left;
+    vertical-align: middle;
+    letter-spacing: 6px;
+    /**padding: 5px 5px 5px 25px;**/
+}
+
+input[type="text"], input[type="password"] {
+    padding: 2px;
+}
+
+#mainTabCloseMenu {
+    width: 120px !important;
+}
+
+.list-none {
+    list-style: none;
+}
+
+.list-none li {
+    float: left;
+    margin-left: 5px;
+}
+
+.change-theme-content {
+    list-style: none;
+    padding: 5px;
+}
+
+.change-theme-content li {
+    float: left;
+    width: 28px;
+    height: 18px;
+    padding: 3px;
+}
+
+.change-theme-content li div {
+    text-align: center;
+    height: 14px;
+    width: 24px;
+}
+
+.change-theme-content li div:hover {
+    cursor: pointer;
+    border: 1px purple solid;
+}
+
+#changePasswordForm div {
+    padding: 3px 0;
+}
+
+#changePasswordForm div label {
+    float: left;
+    text-align: right;
+    width: 60px;
+}
+
+#changePasswordForm div input {
+    width: 120px;
+}
+
+.change-theme-content div,
+input[type="text"],
+input[type="password"] {
+    font-size: 14px;
+    vertical-align: middle;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.change-theme-content div,
+input[type="text"],
+input[type="password"] {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.change-theme-content div:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+.form-tool-title {
+    font-weight: bold;
+    padding: 2px 2px 0px 10px;
+}
+
+.form-search tr td {
+    padding: 2px 2px 2px 14px;
+    border: 0px solid #000000;
+    text-align: right;
+}
+
+.form-table tr td {
+    padding: 2px 2px 2px 14px;
+    border: 0px solid #000000;
+    text-align: left;
+}
+
+.form-table tr td div {
+    width: 90px;
+    line-height: 24px;
+    float: left;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.form-table tr td input[type="radio"] {
+    width: 20px;
+}
+
+.form-table tr td input[type="text"] {
+    width: 220px;
+}
+
+.form-table tr td[colspan="2"] input[type="text"] {
+    width: 556px;
+}
+
+.form-table tr td input[type="password"] {
+    width: 220px;
+}
+
+.form-table tr td textarea {
+    width: 558px;
+    height: 50px;
+}
+
+
+.exit {
+    float: right;
+    width: 80px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.updatepassword {
+    float: right;
+    width: 40px;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+.kindEditor .ke-toolbar, .kindEditor .ke-statusbar, .kindEditor .ke-content, .kindEditor .ke-edit {
+    width: 100% !important;
+}
+
+.kindEditor .ke-statusbar {
+    text-align: center !important;
+}
+
+.iconfont_addImage {
+    background-color: #dfdfdf;
+    border: 1px dashed #c0ccda;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 100px !important;
+    vertical-align: top !important;
+    display: inline-block;
+    text-align: center !important;
+    cursor: pointer;
+    outline: 0;
+}
+
+.iconfont_imageDelete {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100% !important;
+    height: 30px;
+    line-height: 30px !important;
+    text-align: center !important;
+    color: #fff;
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    cursor: pointer;
+    display: none;
+}
+
+.iconfont_imageDiv {
+    width: 100px !important;
+    height: 100px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: left !important;
+    position: relative;
+    display: none;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
+}
+

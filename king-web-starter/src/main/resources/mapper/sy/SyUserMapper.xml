@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cat.sy.dao.SyUserDao">
+    <resultMap type="com.cat.sy.entity.SyUser" id="syUser">
+        <id property="id" column="ID"/>
+        <result property="status" column="STATUS"/>
+        <result property="userName" column="USER_NAME"/>
+        <result property="password" column="PASSWORD"/>
+        <result property="name" column="NAME"/>
+        <result property="mobile" column="MOBILE"/>
+        <result property="idNumber" column="ID_NUMBER"/>
+        <result property="sexCd" column="SEX_CD"/>
+        <result property="birthday" column="BIRTHDAY"/>
+        <result property="createTime" column="CREATE_TIME"/>
+        <result property="createUserId" column="CREATE_USER_ID"/>
+        <result property="note" column="NOTE"/>
+        <result property="msgStatus" column="MSG_STATUS"/>
+        <result property="userId" column="USER_ID"/>
+        <result property="token" column="TOKEN"/>
+        <result property="tokenTime" column="TOKEN_TIME"/>
+    </resultMap>
+
+    <!--***********************define end*************************-->
+
+    <sql id="page_where_sql">
+        where 1=1
+        <if test="status != null and status !=''">
+            AND t.STATUS = #{status}
+        </if>
+        <if test="userName != null and userName !=''">
+            AND t.USER_NAME LIKE CONCAT(CONCAT('%', #{userName}),'%')
+        </if>
+        <if test="text != null and text !=''">
+            AND t.USER_NAME LIKE CONCAT(CONCAT('%', #{text}),'%')
+        </if>
+        order by CREATE_TIME DESC
+    </sql>
+
+    <!--   <select id="findPageList" resultMap="syUser" parameterType="hashMap">
+       <![CDATA[
+        SELECT * FROM (
+                SELECT tt.*, ROWNUM AS rowno FROM (
+                        SELECT t.* FROM sy_user t    ]]> <include refid="page_where_sql" />  <![CDATA[
+                        ) tt  WHERE ROWNUM <= #{oracleEnd})
+                ttt  WHERE ttt.rowno >= #{oracleStart}
+            ]]>
+      </select> -->
+
+    <update id="updateForResetPassword" parameterType="hashMap">
+        UPDATE sy_user SET PASSWORD=#{password}
+        WHERE id = #{id}
+    </update>
+
+    <update id="updatePassword" parameterType="hashMap">
+        UPDATE sy_user SET PASSWORD=#{newPassword}
+        WHERE id = #{id} and PASSWORD=#{password}
+    </update>
+
+    <update id="updateForToken" parameterType="hashMap">
+        UPDATE sy_user SET TOKEN=#{token,jdbcType=VARCHAR},TOKEN_TIME=#{tokenTime,jdbcType=VARCHAR}
+        WHERE id = #{id}
+    </update>
+
+</mapper>
