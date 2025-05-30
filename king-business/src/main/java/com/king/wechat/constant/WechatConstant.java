@@ -20,6 +20,6 @@ public class WechatConstant {
     public static final long ACCESS_TOKEN_VALIDATE = 5400 * 1000;
 
     /** session key AES加解密秘钥*/
-    public static final String KEY_FOR_SESSION_KEY = "king123pig456app";
+    public static final String KEY_FOR_SESSION_KEY = "king*****";
 
 }
